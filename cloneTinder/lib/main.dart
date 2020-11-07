@@ -43,12 +43,13 @@ class LoginPage extends StatelessWidget {
                     width: 40,
                     height: 40,
                     fit: BoxFit.fill,
+                    color: Colors.white,
                   ),
                   SizedBox(
                     width: 3,
                   ),
                   Text(
-                    "tinder flutter",
+                    "tindev flutter",
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
