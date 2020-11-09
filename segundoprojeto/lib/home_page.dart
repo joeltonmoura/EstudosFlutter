@@ -17,20 +17,25 @@ class HomePageState extends State<HomePage> {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            Container(
-              height: 88.1,
-              child: DrawerHeader(
-                child: Container(
-                    alignment: Alignment.center,
-                    child: FlutterLogo(
-                        size: 150, style: FlutterLogoStyle.horizontal)),
-                decoration: BoxDecoration(
-                  color: Color(0xFF222831),
-                  border: Border(
-                    bottom: BorderSide(width: 1, color: Colors.red),
-                  ),
-                ),
-              ),
+            UserAccountsDrawerHeader(
+                currentAccountPicture:
+                    ClipOval(child: Image.asset('assets/images/pp.jpeg')),
+                accountName: Text('Jolton Moura'),
+                accountEmail: Text('joeltonmoura1@gmail.com')),
+            ListTile(
+              title: Text('Home'),
+              leading: Icon(Icons.home),
+              onTap: () {
+                print('Clicado');
+              },
+            ),
+            Divider(),
+            ListTile(
+              title: Text('Sair'),
+              leading: Icon(Icons.exit_to_app),
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed('/');
+              },
             ),
           ],
         ),
